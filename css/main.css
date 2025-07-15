@@ -74,6 +74,7 @@ html {
 
 .slider_bg .slider__item {
   max-height: 100vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .slider__item.opened {
@@ -105,12 +106,17 @@ html {
   transform: translateY(2vh);
 }
 
-.title {
+.main__title {
   font-size: calc(var(--sizeindex) * 2.1);
-  line-height: 1.2;
+  line-height: 1.1;
   font-weight: 900;
   display: inline-block;
   background: linear-gradient(45deg, LIme, LightSkyBlue, Magenta);
+  margin-bottom: 15px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.main__description {
+  font-size: 18px;
 }

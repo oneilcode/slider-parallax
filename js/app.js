@@ -24,13 +24,8 @@ const sliderBg = new Swiper('.slider_bg', {
 
 sliderMain.controller.control = sliderBg
 
-document.querySelectorAll('.slider__item').forEach(item => {
-   item.addEventListener('click', event => {
-      item.classList.toggle('opened')
-   })
-})
+let mainSection = document.querySelector('.main')
 
-let main = document.querySelector('.main')
 sliderMain.on('slideChange', e => {
-   sliderMain.activeIndex > 0 ? main.classList.add('hidden') : main.classList.remove('hidden')
+   sliderMain.activeIndex > 0 ? mainSection.classList.add('hidden') : mainSection.classList.remove('hidden')
 })
