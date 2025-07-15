@@ -3,21 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --dark: #070707;
   --sizeindex: calc(1vw + 1vh);
   --transition: 0.75s cubic-bezier(0.2, 0.5, 0, 1);
 }
+
 @font-face {
   font-family: raleway;
   src: url(../fonts/raleway-v22-cyrillic-300.woff2);
   font-weight: 300;
 }
+
 @font-face {
   font-family: raleway;
   src: url(../fonts/raleway-v22-cyrillic-900.woff2);
   font-weight: 900;
 }
+
 body,
 html {
   width: 100%;
@@ -28,6 +32,7 @@ html {
   overflow: hidden;
   line-height: 1.8;
 }
+
 .slider {
   height: 100%;
   transform: rotate(15deg);
@@ -35,16 +40,19 @@ html {
   top: 10vh;
   padding-left: 40vw;
 }
+
 .slider__wrapper {
   transition: var(--transition) !important;
   will-change: transform;
 }
+
 .slider__item {
   max-height: 75vh;
   overflow: hidden;
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
 }
+
 .slider__img {
   width: 300%;
   height: 100%;
@@ -54,6 +62,7 @@ html {
   transition: var(--transition) !important;
   will-change: transform;
 }
+
 .slider_bg {
   z-index: 0;
   transform: rotate(-20deg) !important;
@@ -62,14 +71,17 @@ html {
   opacity: 0.15;
   filter: saturate(500) blur(120px);
 }
+
 .slider_bg .slider__item {
   max-height: 100vh;
 }
+
 .slider__item.opened {
   z-index: 2;
   transform: rotate(-15deg) scale(1.2);
   box-shadow: rgb(0 0 0 / 0.75) 0 0 0 10000px;
 }
+
 .main {
   position: absolute;
   font-size: calc(var(--sizeindex) * 0.8);
@@ -78,18 +90,22 @@ html {
   max-width: 24vw;
   transition: opacity var(--transition), transform var(--transition);
 }
+
 .main p {
   opacity: 0.9;
   transition: transform var(--transition);
 }
+
 .main.hidden {
   opacity: 0;
   transform: translateY(5vh);
 }
+
 .main.hidden p {
   transform: translateY(2vh);
 }
-.logo {
+
+.title {
   font-size: calc(var(--sizeindex) * 2.1);
   line-height: 1.2;
   font-weight: 900;
